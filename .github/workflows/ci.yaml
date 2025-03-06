@@ -30,6 +30,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: wesleywillians/fc2.0-ci-go:latest
+          tags: rodrigordavila/fc2.0-ci-go:latest
+      - name: SonarCloud Scan
+        uses: antonioaversa/sonarcloud-github-action@v4.0.0
 
     
