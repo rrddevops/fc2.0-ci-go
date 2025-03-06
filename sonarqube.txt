@@ -1,10 +1,18 @@
 $ docker run --name sonarqube-custom -p 9000:9000 sonarqube:10.6-community 
 
-$docker run --rm \
+$ docker run --rm \
     -e SONAR_HOST_URL="http://sonarqube-custom"  \
     -e SONAR_TOKEN="sqp_ca6a62f2b1fe89e6a64c8153dcadbf1ea0898385" \
     -v "${YOUR_REPO}:/usr/src" \
     sonarsource/sonar-scanner-cli
 
+
+https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner/
+https://docs.sonarsource.com/sonarqube-server/10.8/setup-and-upgrade/install-the-server/installing-sonarqube-from-docker/
 Gerar token projeto 
 sqp_ca6a62f2b1fe89e6a64c8153dcadbf1ea0898385
+
+onar-project-proprieties 
+
+- name: SonarCloud Scan
+  uses: antonioaversa/sonarcloud-github-action@v4.0.0
