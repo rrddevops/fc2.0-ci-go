@@ -1,0 +1,10 @@
+$ docker run --name sonarqube-custom -p 9000:9000 sonarqube:10.6-community 
+
+$docker run --rm \
+    -e SONAR_HOST_URL="http://sonarqube-custom"  \
+    -e SONAR_TOKEN="sqp_ca6a62f2b1fe89e6a64c8153dcadbf1ea0898385" \
+    -v "${YOUR_REPO}:/usr/src" \
+    sonarsource/sonar-scanner-cli
+
+Gerar token projeto 
+sqp_ca6a62f2b1fe89e6a64c8153dcadbf1ea0898385
