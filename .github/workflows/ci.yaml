@@ -34,5 +34,7 @@ jobs:
           
       - name: SonarCloud Scan
         uses: antonioaversa/sonarcloud-github-action@v4.0.0
+        env: 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     
