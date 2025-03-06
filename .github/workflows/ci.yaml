@@ -31,6 +31,7 @@ jobs:
         with:
           push: false
           tags: rodrigordavila/fc2.0-ci-go:latest
+
       - name: SonarCloud Scan
         uses: antonioaversa/sonarcloud-github-action@v4.0.0
 
